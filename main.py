@@ -14,3 +14,7 @@ if __name__ == '__main__':
     # first it will run, but we will not be able to see anything cause we dont have the home page or root for our website
 
 
+#post generally means that you are making a change to database
+
+#get request means that you are just looking at a webpage
+
