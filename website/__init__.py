@@ -11,4 +11,11 @@ def create_app():
     #this is going to encrypt cookies and session data regarding our website
     app.config['SECRET_KEY'] = 'team_43_CMPT370'
     #never share this secret key with anybody.
+    from .views import views
+    from .auth import auth
+
+    app.register_blueprint(views,url_prefix='/')
+    app.register_blueprint(auth,url_prefix='/') #That means we have to go through / we can also add prefix if we want to
+
+
     return app

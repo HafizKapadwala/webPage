@@ -11,6 +11,6 @@ app = create_app()
 #this will create a webserver only it will run when this file is running, not if it is called from any other py files
 if __name__ == '__main__':
     app.run(debug=True)#debug=true means that whenever we make a change in our webserver it will automatically run that
-
+    # first it will run, but we will not be able to see anything cause we dont have the home page or root for our website
 
 
