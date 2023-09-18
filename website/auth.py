@@ -1,4 +1,4 @@
-from flask import Blueprint,render_template
+from flask import Blueprint,render_template,request 
 
 #we are going to define that this file is Blueprint for our application, bunch of roots inside
 #Login page
@@ -6,7 +6,7 @@ from flask import Blueprint,render_template
 auth = Blueprint('auth',__name__)
 
 
-@auth.route('/login')
+@auth.route('/login',methods=['GET','POST'])
 def login():
     return render_template("login.html")
 
@@ -14,6 +14,6 @@ def login():
 def logout():
     return "<p>Logout</p>"
 
-@auth.route('/signup')
+@auth.route('/signup',methods=['GET','POST'])
 def sigup():
     return render_template("sender.html")
